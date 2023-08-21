@@ -1,0 +1,5 @@
+export {default as HeaderImg} from "./Images/header.webp"
+export {default as Feartured1} from "./Images/Featured1.webp"
+export {default as Feartured2} from "./Images/Featured2.webp"
+export {default as Feartured3} from "./Images/Featured3.webp"
+export {default as Feartured4} from "./Images/Featured4.webp"
