@@ -1,22 +1,22 @@
-"use client";
+"use client"
 
-import { oneProductType } from "../../utils/ProductsDataArrayAndType";
+// import { oneProductType } from "@/component/utils/ProductsDataArrayAndType";
+import { oneProductType } from "@/components/utils/ProductsDataArrayAndType";
 import { Component } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import BASE_PATH_FORAPI from "../../shared/BasePath";
+// import BASE_PATH_FORAPI from "../../shared/BasePath";
+import BASE_PATH_FORAPI from "@/components/shared/BasePath";
 import Card from "../Card";
 
 interface propsType {
   productArray: Array<oneProductType>;
 }
 
-export default class AllProductsCompo extends Component<{
-  ProductData: propsType;
-}> {
+export default class AllProductsCompo extends Component<{ProductData: propsType}> {
   start: number = 10;
   end: number = 20;
-  state:  {items: Array<oneProductType>, hasMore: boolean} ={
-    items: [...this.props.ProductData.productArray],
+  state: any = {
+    items:  [...this.props.ProductData.productArray],
     hasMore: true,
   }
   fetchDataFromApiGradually = async (start: number, end: number) => {
@@ -62,8 +62,8 @@ export default class AllProductsCompo extends Component<{
           }
           className="grid grid-cols-1 md:grid-cols-2 py-10 lg:grid-cols-3 ga"
         >
-          {this.state.items.map((item: oneProductType, Index: number)=>(
-            <Card key={Index} singleProductData={item}/>
+          {this.state.items.map((item: oneProductType, index: number)=>(
+            <Card key={index} singleProductData={item}/>
           ))}
         </InfiniteScroll>
       
