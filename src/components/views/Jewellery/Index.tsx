@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import IMG from "@/app/components/assets/Images/product3.png";
+import IMG from "@/components/assets/Images/product3.png";
 
 const Jewellery = () => {
   return (

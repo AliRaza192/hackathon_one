@@ -26,9 +26,7 @@ export default class AllProductsCompo extends Component<{
       this.setState({hasMore: false})
     }
     return dataToCheckAndSend;
-    return res.json()
-    // let data = await res.json()
-    // console.log(data);
+    // return res.json()
     
   }
   getData = async () => {
@@ -46,10 +44,8 @@ export default class AllProductsCompo extends Component<{
       }
          
       this.start = this.start + 10
-      this.end = this.end + 10
+      this.end = this.end + 20
     }
-    // console.log(this.props.ProductData.productArray[0].price);
-    // console.log(this.props.ProductData);
   
   render() {
     return (
@@ -67,7 +63,7 @@ export default class AllProductsCompo extends Component<{
           className="grid grid-cols-1 md:grid-cols-2 py-10 lg:grid-cols-3 ga"
         >
           {this.state.items.map((item: oneProductType, Index: number)=>(
-            <Card singleProductData={item}/>
+            <Card key={Index} singleProductData={item}/>
           ))}
         </InfiniteScroll>
       

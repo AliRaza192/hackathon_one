@@ -1,5 +1,5 @@
-import { HeaderImg } from '@/app/components/assets'
-import { Feartured1, Feartured2, Feartured3, Feartured4 } from '@/app/components/assets';
+import { HeaderImg } from '@/components/assets'
+import { Feartured1, Feartured2, Feartured3, Feartured4 } from '@/components/assets';
 import { BsCart } from "react-icons/bs";
 import Image from 'next/image'
 import React from 'react'

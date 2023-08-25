@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import Hero from './components/views/Navbar/Hero/Index'
-import ProductTypes from './components/views/ProductTypes'
-import BASE_PATH_FORAPI from './components/shared/BasePath';
-import ProductCarousel from './components/views/ProductCarousel';
-import { responseType } from './components/utils/ProductsDataArrayAndType';
-import Jewellery from './components/views/Jewellery/Index';
-import NewLetter from './components/views/Newsletter/Index';
+;import Image from 'next/image'
+import Hero from '@/components/views/Navbar/Hero/Index'
+import ProductTypes from '@/components/views/ProductTypes'
+import BASE_PATH_FORAPI from '@/components/shared/BasePath';
+import ProductCarousel from '@/components/views/ProductCarousel';
+import { responseType } from '@/components/utils/ProductsDataArrayAndType';
+import Jewellery from '@/components/views/Jewellery/Index';
+import NewLetter from '@/components/views/Newsletter/Index';
 
 
 
@@ -25,7 +25,6 @@ async function fetchAllProductsData(){
 
 export default async function Home() {
   let {result}: responseType = await fetchAllProductsData();
-  // console.log("response : ", response);
   
   return (
    

@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import {
   NavbarArray,
   NavbarItemType,
-} from "@/app/components/utils/NavbarArrayAndTypes";
+} from "@/components/utils/NavbarArrayAndTypes";
 import Link from "next/link";
 import React, { useState } from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";

@@ -1,7 +1,7 @@
 import {
   NavbarArray,
   NavbarItemType,
-} from "@/app/components/utils/NavbarArrayAndTypes";
+} from "@/components/utils/NavbarArrayAndTypes";
 import Link from "next/link";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import React, { FC, useState } from "react";
@@ -38,7 +38,7 @@ const Expend: FC<{ item: NavbarItemType }> = ({ item }) => {
         {" "}
         {isTimeOut &&
           item.DropDownData?.map((subItem: NavbarItemType, index: number) => (
-            <Link
+            <Link key={index}
               className="hover:bg-gray-100 py-1 rounded-md px-5 duration-300"
               href={subItem.href}
             >

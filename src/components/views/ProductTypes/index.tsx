@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import Promote1 from "@/app/components/assets/Images/promote.webp";
-import Promote2 from "@/app/components/assets/Images/promote2.webp";
-import Promote3 from "@/app/components/assets/Images/promote3.webp";
+import Promote1 from "@/components/assets/Images/promote.webp";
+import Promote2 from "@/components/assets/Images/promote2.webp";
+import Promote3 from "@/components/assets/Images/promote3.webp";
 
 const ProductTypes = () => {
   return (

@@ -1,10 +1,9 @@
 import React, { FC } from 'react'
 import { oneProductType } from '../utils/ProductsDataArrayAndType'
 import imageUrlBuilder from '@sanity/image-url'
-import { client } from '../../../../sanity/lib/client';
+import { client } from '../../../sanity/lib/client';
 import Image from 'next/image';
 import Link from 'next/link';
-// import PortableText from 'react-portable-text';
 
 
 const builder = imageUrlBuilder(client);
@@ -14,7 +13,6 @@ function urlFor(source: any) {
 }
 
 const Card: FC<{singleProductData: oneProductType}> = ({singleProductData}) => {
-  // console.log();
   
 
   return (
@@ -26,7 +24,6 @@ const Card: FC<{singleProductData: oneProductType}> = ({singleProductData}) => {
       </div>
       <div className='space-y-1 text-mainHeading font-semibold text-lg select-none '>
         <h6>{singleProductData.productName}</h6>
-        {/* <p><PortableText content={singleProductData.description} /></p> */}
         <p>{singleProductData.price}</p>
       </div>
     </div>

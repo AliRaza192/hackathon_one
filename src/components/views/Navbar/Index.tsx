@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-between items-center w-full">
           <ul className="flex space-x-4 font-semibold text-lg ">
             {NavbarArray.map((item: NavbarItemType, index: number) => (
-              <li className="flex items-center relative rounded-sm px-3 py-1 hover:bg-gray-100 cursor-pointer group">
+              <li key={index} className="flex items-center relative rounded-sm px-3 py-1 hover:bg-gray-100 cursor-pointer group">
                 <Link className="hover:underline" href={item.href}>
                   {item.label}
                 </Link>
@@ -83,19 +83,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-{
-  /* {isNavbarOPen && <MobileNavbar />} */
-}
-{
-  /* <div onClick={() => setNavbarOpen(!isNavbarOPen)}>
-  {isNavbarOPen ? (
-    <div className="flex lg:hidden">
-      <IoMdClose size={27} />
-    </div>
-  ) : (
-    <div className="flex lg:hidden">
-      <GiHamburgerMenu size={27} />
-    </div>
-  )}
-</div> */
-}

@@ -1,6 +1,6 @@
 import React from 'react'
-import BASE_PATH_FORAPI from '@/app/components/shared/BasePath'
-import AllProductsCompo from '@/app/components/views/AllProductData/Index'
+import BASE_PATH_FORAPI from '@/components/shared/BasePath'
+import AllProductsCompo from '@/components/views/AllProductData/index'
 
 
 async function fetchAllProductData(){
