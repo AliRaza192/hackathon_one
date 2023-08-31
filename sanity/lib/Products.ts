@@ -13,21 +13,21 @@ export default {
             name: 'slug',
             type: 'slug',
             options: {
-              source: 'productName',
-              maxLength: 200, // will be ignored if slugify is set
-              slugify: (input: any) => input
-                                   .toLowerCase()
-                                   .replace(/\s+/g, '-')
-                                   .slice(0, 200)
+                source: 'productName',
+                maxLength: 200, // will be ignored if slugify is set
+                slugify: (input: any) => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
             }
-          },
+        },
         {
             name: 'description',
             type: 'array',
             title: 'Description',
-            of:[
+            of: [
                 {
-                    type:"block"
+                    type: "block"
                 }
             ]
         },
@@ -38,11 +38,11 @@ export default {
             of: [
                 {
                     type: 'image',
-                    fields:[
+                    fields: [
                         {
-                            name:"alt",
-                            type:"text",
-                            title:"Alternative text",
+                            name: "alt",
+                            type: "text",
+                            title: "Alternative text",
                         }
                     ]
                 }
@@ -53,11 +53,6 @@ export default {
             type: 'array',
             title: 'ProductType',
             of: [{ type: 'string' }]
-        },
-        {
-            name: 'listedDate',
-            type: 'datetime',
-            title: 'ListedDate'
         },
         {
             name: 'price',

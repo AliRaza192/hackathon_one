@@ -1,5 +1,5 @@
-const BASE_PATH_FORAPI =  process.env.NODE_ENV === "development" ? 
- "http://localhost/3000" : "https://vercel.com/alirazaqasim192-gmailcom/hackathon-one"
+const BASE_PATH_FORAPI = 
+    "http://localhost:3000" 
 
 
 

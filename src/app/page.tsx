@@ -11,7 +11,6 @@ import NewLetter from '@/components/views/Newsletter/Index';
 
 async function fetchAllProductsData(){
   
-  // let res = await fetch(`https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2023-08-08/data/query/production?query=*[_type == "products"]`,{
     let res = await fetch(`https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2023-08-08/data/query/production?query=*[_type == "products"]`,{
   
   next: {
@@ -27,7 +26,7 @@ async function fetchAllProductsData(){
 }
 
 export default async function Home() {
-  let {result}: responseType = await fetchAllProductsData();
+  let {result} : responseType = await fetchAllProductsData();
   
   return (
    
