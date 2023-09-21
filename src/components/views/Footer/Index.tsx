@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Logo from "/public/logo.webp";
 
 
-// import Link form "next/link"
 const Footer = () => {
   return (
     <div>

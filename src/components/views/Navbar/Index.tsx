@@ -11,11 +11,22 @@ import { NavbarItemType, NavbarArray } from "../../utils/NavbarArrayAndTypes";
 import Link from "next/link";
 import DropDown from "./subComponents/DropDown";
 import MobileNavbar from "./subComponents/MobileNavbar";
-// import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+
 
 const Navbar = () => {
+  const router = useRouter();
   const [isNavbarOPen, setNavbarOpen] = useState<boolean>(false);
   const [cartItemNumber, setcartItemNumber] = useState<number>(0)
+  const [searchQuery, setSearchQuery] = useState("");
+
+  function handleSearchCalledFunc(e: any){
+    console.log(e.key, e.keyCode)
+    if(e.key === "Enter" && e.keyCode === 13){
+      router.push(`/search/${searchQuery}`)
+    }
+  }
 
   return (
     <div className="static top-0 backdrop-blur-lg lg bg-white z-50">
@@ -49,9 +60,14 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="border flex items-center text-gray-600 px-3 rounded-md">
-            <BiSearch />
+              <Link href={`/search/${searchQuery}`}>
+                 <BiSearch />
+              </Link>
             <input
               type="text"
+              value={searchQuery}
+              onKeyDown={handleSearchCalledFunc}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search Products Our Store"
               className="focus:outline-none pl-1 pr-5 py-1 w-80"
             />

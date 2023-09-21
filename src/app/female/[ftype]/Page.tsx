@@ -6,7 +6,7 @@ import React, { FC } from 'react'
 
 async function fetchAllProductsData(){
   
-    let res = await fetch(`https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2023-08-08/data/query/production?query=*%5B_type+%3D%3D+%22products%22+%26%26+productType%5B0%5D%3D%3D+%22Female%22%5D`,{
+    let res = await fetch(`https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2023-08-08/data/query/production?query=*%5B_type+%3D%3D+%22products%22+%26%26+productTypes%5B0%5D+%3D%3D+%22Female%22%5D`,{
   
   next: {
       revalidate: 60
@@ -23,11 +23,16 @@ async function fetchAllProductsData(){
 
 const Female = async ({params}: {params: {ftype: string}}) => {
     let res: responseType =  await fetchAllProductsData();
-    // console.log(res);
+    if(params.ftype !== "Female") {
+      let orginalStroedDataOfParams = res.result.filter((items: oneProductType) => items.productTypes[1] === params.ftype)
+      console.log(orginalStroedDataOfParams);
+      res = {result: orginalStroedDataOfParams}
+      
+    }
     
   return (
     
-    <div className="content-center justify-center grid grid-cols-2 md:grid-cols-3 py-10 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 py-10 lg:grid-cols-3 gap-6 ">
         {res.result.map((items: oneProductType, index: number) => (
             <Card  key={index} singleProductData={items} />
         ))}    

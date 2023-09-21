@@ -1,70 +1,10 @@
 "use client";
-
 import React, { Component, FC, ReactNode } from "react";
 import { oneProductType } from "../../utils/ProductsDataArrayAndType";
 import Card from "../Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
-
-
-// import React from "react";
-// import Slider from "react-slick";
-
-
-// const ProductCarousel: FC<{ ProductData: Array<oneProductType> }> = ({ProductData}) => {
-  // let dataToSend = ProductData.slice(0,3)
-  // console.log(ProductData);
-
-//   return <div className="flex">
-//     {ProductData.map((item: oneProductType, Index: number) => (
-//       <Card singleProductData={item}/>
-//     ))}
-//   </div>;
-// };
-
-
-
-// export default class ProductCarousel extends Component<{ProductData: Array<oneProductType>}>{
-//   render(): ReactNode {
-//     const settings = {
-//           speed: 500,
-//           slidesToShow: 3,
-//           slidesToScroll: 1
-//         };
-//         responsive: [
-//           {
-//             breakpoint: 1024,
-//             settings: {
-//               slidesToShow: 1,
-//               slidesToScroll: 1,
-              
-//             }
-//           },
-          
-//         ]
-//     return(
-//       <Slider {...settings}>
-//         {this.props.ProductData.map((item: oneProductType, Index: number) => (
-//       <Card singleProductData={item}/>
-//         ))}
-//       </Slider>
-//     )
-//   }
-// }
-
-
-
-
-
-
-
-
-// "use client"
-// import { oneProductType } from "@/components/utils/ProductsDataArrayAndType"
-// import { Component, FC, ReactNode } from "react"
-// import Card from "../Card"
 
 const ProductCarousel: FC<{ ProductData: Array<oneProductType> }> = ({ ProductData }) => {
     let initialX: number;
@@ -141,52 +81,4 @@ export default ProductCarousel
 
 
 
-
-
-
-
-// export default ProductCarousel;
-
-
-
-
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
-
-
-// import React from "react";
-// import Slider from "react-slick";
-
-// export default function SimpleSlider() {
-//   var settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1
-//   };
-//   return (
-//     <Slider {...settings}>
-//       <div>
-//         <h3>1</h3>
-//       </div>
-//       <div>
-//         <h3>2</h3>
-//       </div>
-//       <div>
-//         <h3>3</h3>
-//       </div>
-//       <div>
-//         <h3>4</h3>
-//       </div>
-//       <div>
-//         <h3>5</h3>
-//       </div>
-//       <div>
-//         <h3>6</h3>
-//       </div>
-//     </Slider>
-//   );
-// }
 
